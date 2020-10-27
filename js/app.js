@@ -26,7 +26,7 @@ if (secondAnswer.toLowerCase() === 'no') {
   console.log('Sorry. That is incorrect. Bill does indeed aspire to becoming a successful software developer.');
 }
 else if (secondAnswer.toUpperCase() === 'YES') {
-  console.log('Right! Bill is currently working toward that goal. (...at breakneck speed)');
+  console.log('Right! Bill is currently working toward that very goal. (...at breakneck speed)');
   totalScore++;
 }
 else {
@@ -54,7 +54,7 @@ if (fourthAnswer.toLowerCase() === 'yes') {
   console.log('Sorry. That is incorrect. Bill spent 15 years working in the trucking manufacturing industry.');
 }
 else if (fourthAnswer.toUpperCase() === 'NO') {
-  console.log('Yes! Bill only worked in aerospace for Hexcel for 5 years.');
+  console.log('Yes! Bill only worked in aerospace for 5 years.');
   totalScore++;
 }
 else {
@@ -75,5 +75,23 @@ else {
   console.log('You did not answer "yes" or "no", so I am afraid you do not get credit. Please answer subsequent questions either "yes" or "no".');
 }
 
-
 console.log(totalScore);
+
+if (totalScore === 5) {
+  console.log('Congratulations ' + userName + '!! You scored 100%. Well done!!');
+}
+else if (totalScore === 4) {
+  console.log('Good Job ' + userName + '! You scored 80%. Not bad! (...but not quite good enough to pass Code 201 either)');
+}
+else if (totalScore === 3) {
+  console.log('Passable, ' + userName + '. You scored 60%. Room for improvement to be sure.');
+}
+else if (totalScore === 2) {
+  console.log('At least you made an effort ' + userName + '. You scored 40%. I would definitely go back to the source material.');
+}
+else if (totalScore === 4) {
+  console.log('Were you just randomly guessing, ' + userName + '? You scored 20%. Oh my!');
+}
+else {
+  console.log("Couldn't pick him out of a lineup, could you " + userName + ". That's alright. Try try again.")
+}
