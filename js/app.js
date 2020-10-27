@@ -33,4 +33,47 @@ else {
   console.log('You did not answer "yes" or "no", so I am afraid you do not get credit. Please answer subsequent questions either "yes" or "no".');
 }
 
+// third question
+var thirdAnswer = prompt("Bill's son, Riley, is his eldest child.");
+
+if (thirdAnswer.toLowerCase() === 'no') {
+  console.log('Unfortunately, that is incorrect. His son, Riley, is 14 while his daughter, Alexis, is only 12.');
+}
+else if (thirdAnswer.toUpperCase() === 'YES') {
+  console.log('That is correct! Riley is actually only older than his sister by 17 months.');
+  totalScore++;
+}
+else {
+  console.log('You did not answer "yes" or "no", so I am afraid you do not get credit. Please answer subsequent questions either "yes" or "no".');
+}
+
+// fourth question
+var fourthAnswer = prompt('Bill spent 15 years working in the aerospace manufacturing industry.');
+
+if (fourthAnswer.toLowerCase() === 'yes') {
+  console.log('Sorry. That is incorrect. Bill spent 15 years working in the trucking manufacturing industry.');
+}
+else if (fourthAnswer.toUpperCase() === 'NO') {
+  console.log('Yes! Bill only worked in aerospace for Hexcel for 5 years.');
+  totalScore++;
+}
+else {
+  console.log('You did not answer "yes" or "no", so I am afraid you do not get credit. Please answer subsequent questions either "yes" or "no".');
+}
+
+// fifth question
+var fifthAnswer = prompt('So far, Bill has lived in Tacoma a total of 4 times.');
+
+if (fifthAnswer.toLowerCase() === 'yes') {
+  console.log('Fooled you! Bill technically only lived in Tacoma 3 times. Lakewood, a suburb of Tacoma, actually officially became a city in 1996. Tricksy!');
+}
+else if (fifthAnswer.toUpperCase() === 'NO') {
+  console.log('Very good! Bill technically only lived in Tacoma 3 times. Lakewood, a suburb of Tacoma, actually officially became a city in 1996. Tricksy!');
+  totalScore++;
+}
+else {
+  console.log('You did not answer "yes" or "no", so I am afraid you do not get credit. Please answer subsequent questions either "yes" or "no".');
+}
+
+
 console.log(totalScore);
