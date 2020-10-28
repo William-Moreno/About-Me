@@ -1,35 +1,65 @@
 * {
-  background-color: paleturquoise;
+  background-color: rgb(19, 24, 24);
   font-family: cursive;
   font-size: 18px;
   line-height: 20px;
+  color: rgb(252, 241, 228);
+}
+
+header {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(2, 43, 2);
+  font-family: cursive;
+  border: 12px groove rgb(214, 164, 99);
+  border-bottom: none;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  padding: 18px;
+}
+
+article {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(2, 43, 2);
+  border: 12px groove rgb(214, 164, 99);
+  border-top: none;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  padding: 18px;
 }
 
 h1 {
-  width: 400px;
-  height: 50px;
+  background-color: rgb(2, 43, 2);
+  width: 80%;
+  height: 84px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   text-transform: uppercase;
-  line-height: 50px;
-  font-size: 36px;
+  line-height: 84px;
+  font-size: 72px;
 }
 
 h3 {
+  background-color: inherit;
   margin: 10px;
   font-size: 24px;
 }
 
 .bio {
+  background-color: rgb(2, 43, 2);
   width: 500px;
   margin: 60px auto;
   text-align: center;
 }
 
 .lists {
+  background-color: rgb(2, 43, 2);
   width: 360px;
-  padding: 20px;
+  padding: 20px 20px 2px 20px;
   margin: 10px 15px 0px 15px;
   text-align: left;
 }
@@ -43,5 +73,10 @@ ul li {
 }
 
 li {
+  background-color: inherit;
   margin: 4px;
+}
+
+p {
+  background-color: inherit;
 }
