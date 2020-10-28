@@ -83,10 +83,42 @@ window.onload = function() {
     // console.log('You did not answer "yes/y" or "no/n", so I am afraid you do not get credit. Please answer subsequent questions either "yes/y" or "no/n".');
   }
 
+  var secretNumber = (Math.floor((Math.random()) * 100) + 1); // set random number between 1 and 100
+  var numberOfGuesses = 0;
+  var guess;
+  alert('I am thinking of a number from 1 to 100. I\'ll give you 4 chances to guess it correctly. Are you ready ' + userName + '?');
 
-  var finalScore = Math.round(totalScore / numberOfQuestions);
+  while(numberOfGuesses < 4) {
+    var guess = Math.floor(prompt('Attempt #' + (numberOfGuesses+1) + ': What is your guess, ' + userName + '?'));
 
-  if (totalScore === 5) {
+    while( guess < 1 || guess > 100){
+      guess = prompt('Please enter a number from 1 to 100');
+    }
+
+    if(guess > secretNumber) {
+      console.log('Sorry ' + userName + '. That is too high. Try a lower number.');
+      numberOfGuesses++;
+      if(numberOfGuesses > 3) {
+        console.log('I\'m sorry ' + userName + '. The correct answer was: ' + secretNumber);
+      }
+    } else if (guess < secretNumber) {
+      console.log('Sorry ' + userName + '. That is too low. Try a higher number.');
+      numberOfGuesses++;
+      if(numberOfGuesses > 3) {
+        console.log('I\'m sorry ' + userName + '. The correct answer was: ' + secretNumber);
+      }
+    } else {
+      console.log('Well done, ' + userName + '!' + secretNumber + ' is absolutely correct!! You guessed it in ' + numberOfGuesses + ' attempts.');
+      numberOfGuesses=4;
+      totalScore++;
+    }
+  }
+
+  console.log(secretNumber);
+
+  var finalScore = Math.round(totalScore / numberOfQuestions); // set random number between 1 and 100
+
+  if (totalScore >= 5) {
     alert('Congratulations ' + userName + '!! You scored 100%. Well done!!');
     // console.log('Congratulations ' + userName + '!! You scored 100%. Well done!!');
   } else if (totalScore === 4) {
