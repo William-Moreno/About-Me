@@ -29,6 +29,32 @@ article {
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
   padding: 18px;
+  text-align: center;
+}
+
+div {
+  display: inline-block;
+  /* border: 3px solid red; */
+}
+
+.bio {
+  background-color: rgb(2, 43, 2);
+  width: 40%;
+  padding: 8px;
+  margin: 10px 10px;
+  text-align: center;
+}
+
+.histories {
+  width: 40%;
+  padding: 8px;
+}
+
+.employment,
+.education {
+  display: block;
+  width: 100%;
+  margin: 0px;
 }
 
 h1 {
@@ -45,15 +71,12 @@ h1 {
 
 h3 {
   background-color: inherit;
-  margin: 10px;
-  font-size: 24px;
+  margin: 10px 5px 20px 5px;
+  font-size: 32px;
 }
 
-.bio {
-  background-color: rgb(2, 43, 2);
-  width: 500px;
-  margin: 60px auto;
-  text-align: center;
+.bio p {
+  text-align: left;
 }
 
 .lists {
@@ -79,4 +102,18 @@ li {
 
 p {
   background-color: inherit;
+}
+
+span {
+  background-color: inherit;
+  font-style: italic;
+}
+
+.top-ten h3 {
+  text-decoration: underline;
+}
+
+.ten-places {
+  width: 140px;
+  margin: auto;
 }
