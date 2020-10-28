@@ -92,7 +92,7 @@ window.onload = function() {
     // console.log('You did not answer "yes" or "no", so I am afraid you do not get credit. Please answer subsequent questions either "yes" or "no".');
   }
 
-  console.log(totalScore);
+  // console.log(totalScore);
 
   if (totalScore === 5) {
     alert('Congratulations ' + userName + '!! You scored 100%. Well done!!');
