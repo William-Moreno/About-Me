@@ -15,4 +15,4 @@ I build an app to demonstrate my growing grasp of the fundamentals of HTML, CSS 
 
 - It was difficult not to use some of the knowledge of JavaScript functions and loops that I learned about in Code 102 while working on this project
 - I wanted the page to load fully before the prompts and alerts started firing off, so I went in search of a manner in which I could accomplish my goal. I found good information that helped me with this at JavaScript.Info _(see link above)_
-- I amdmit I'm not a fan of the particular reset.css file which we are using at this time and I can see why many people tailor these files to their own personal tastes.
+- I admit I'm not a fan of the particular reset.css file which we are using at this time and I can see why many people tailor these files to their own personal tastes
