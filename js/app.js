@@ -91,7 +91,7 @@ window.onload = function() {
   alert('I am thinking of a number from 1 to 25. I\'ll give you 4 chances to guess it correctly. Are you ready ' + userName + '?');
 
   while(numberOfGuesses < 4) {
-    guess = Math.floor(parseInt(prompt('Attempt #' + (numberOfGuesses+1) + ': What is your guess, ' + userName + '?')));
+    guess = parseInt(prompt('Attempt #' + (numberOfGuesses+1) + ': What is your guess, ' + userName + '?'));
 
     while(guess < 1 || guess > 25){
       guess = prompt('Please enter a number from 1 to 25');
@@ -144,7 +144,7 @@ window.onload = function() {
     }
 
     if(seriesGuesses < 5) {
-      alert('That\'s incorrect. Try again ' + userName + '. You have ' + (5-seriesGuesses) + ' left.');
+      alert('That\'s incorrect. Try again ' + userName + '. You have ' + (5-seriesGuesses) + ' guesses left.');
       // console.log('That\'s incorrect. Try again ' + userName + '. You have ' + (5-seriesGuesses) + ' left.');
       seriesGuesses++;
     } else if (seriesGuesses === 5){
