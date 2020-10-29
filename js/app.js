@@ -3,7 +3,7 @@ window.onload = function() {
   var totalScore = 0;
   var numberOfQuestions = 7;
 
-  var userName = prompt('Hello! What is your name?').toLowerCase();
+  var userName = prompt('Hello! What is your name?');
   alert('It is nice to meet you, ' + userName + '. My name is Bill. Welcome to the site. Shall we start the game?');
   // console.log('It is nice to meet you, ' + userName + '. My name is Bill. Welcome to the site. Shall we start the game?');
   alert('Determine if the following statements are correct. Please answer the questions with "yes/y" or "no/n".');
@@ -83,38 +83,70 @@ window.onload = function() {
     // console.log('You did not answer "yes/y" or "no/n", so I am afraid you do not get credit. Please answer subsequent questions either "yes/y" or "no/n".');
   }
 
-  var secretNumber = (Math.floor((Math.random()) * 100) + 1); // set random number between 1 and 100
+  /* guessing game */
+
+  var secretNumber = (Math.floor((Math.random()) * 25) + 1); // set random number between 1 and 25
   var numberOfGuesses = 0;
   var guess;
-  alert('I am thinking of a number from 1 to 100. I\'ll give you 4 chances to guess it correctly. Are you ready ' + userName + '?');
+  alert('I am thinking of a number from 1 to 25. I\'ll give you 4 chances to guess it correctly. Are you ready ' + userName + '?');
 
   while(numberOfGuesses < 4) {
     var guess = Math.floor(prompt('Attempt #' + (numberOfGuesses+1) + ': What is your guess, ' + userName + '?'));
 
-    while( guess < 1 || guess > 100){
-      guess = prompt('Please enter a number from 1 to 100');
+    while(guess < 1 || guess > 25){
+      guess = prompt('Please enter a number from 1 to 25');
     }
 
     if(guess > secretNumber) {
       console.log('Sorry ' + userName + '. That is too high. Try a lower number.');
       numberOfGuesses++;
       if(numberOfGuesses > 3) {
-        console.log('I\'m sorry ' + userName + '. The correct answer was: ' + secretNumber);
+        console.log('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
       }
     } else if (guess < secretNumber) {
       console.log('Sorry ' + userName + '. That is too low. Try a higher number.');
       numberOfGuesses++;
       if(numberOfGuesses > 3) {
-        console.log('I\'m sorry ' + userName + '. The correct answer was: ' + secretNumber);
+        console.log('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
       }
     } else {
-      console.log('Well done, ' + userName + '!' + secretNumber + ' is absolutely correct!! You guessed it in ' + numberOfGuesses + ' attempts.');
+      console.log('Well done, ' + userName + '! ' + secretNumber + ' is absolutely correct!! You guessed it in ' + (numberOfGuesses+1) + ' attempts.');
       numberOfGuesses=4;
       totalScore++;
     }
   }
 
-  console.log(secretNumber);
+  /* guess one of my favorite book series */
+
+  var bookSeries = ['Ender\'s Game Series','The Legend of Drizzt Series','Android: Identity Trilogy','The Thrawn Trilogy','Star of the Guardians Series','Kathy Reichs Books','Michael Crichton Books'];
+  var seriesGuesses = 0;
+  var bookGuess;
+  var bookScore = 0;
+  
+  alert('I like reading and have read many series of books over the years. Try to guess one of my favorite book series. This one\'s pretty tough ' + userName +'. Sorry.');
+
+  while(seriesGuesses < 6) {
+    bookGuess = prompt('Please guess a series, trilogy or author\'s books. Examples could be: "John Doe Books", "The Triple Trilogy" or "The Parallel Series"... Good Luck!!').toLowerCase();
+
+    for( var i = 0 ; i < bookSeries.length ; i++) {
+      if( bookGuess === bookSeries[i].toLowerCase()) {
+        console.log('You Rock ' + userName + '!! That is one of them. Well done! My favorite book series are: ' + bookSeries[0] + ', ' + bookSeries[1] + ', ' + bookSeries[2] + ', ' + bookSeries[3] + ', ' + bookSeries[4] + ', ' + bookSeries[5] + ' and ' + bookSeries[6]);
+        seriesGuesses = 6;
+        bookScore = 1;
+        totalScore = totalScore + bookScore;
+      }
+    }  
+
+    if(seriesGuesses < 5) {
+      console.log('That\s incorrect. Try again ' + userName + '. You have ' + (5-seriesGuesses) + ' left.');
+      seriesGuesses++;
+      
+    } else if (seriesGuesses === 5){
+      console.log('Sorry, ' + userName + '. That was your last guess. My favorite book series are: ' + bookSeries[0] + ', ' + bookSeries[1] + ', ' + bookSeries[2] + ', ' + bookSeries[3] + ', ' + bookSeries[4] + ', ' + bookSeries[5] + ' and ' + bookSeries[6]);
+      seriesGuesses++;
+    }
+  }
+
 
   var finalScore = Math.round(totalScore / numberOfQuestions); // set random number between 1 and 100
 
