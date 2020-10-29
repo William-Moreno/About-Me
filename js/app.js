@@ -174,7 +174,7 @@ window.onload = function() {
     alert('Were you just randomly guessing, ' + userName + '? You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. Oh my!');
     // console.log('Were you just randomly guessing, ' + userName + '? You scored 20%. Oh my!');
   } else {
-    alert('Couldn\'t pick him out of a lineup, could you ' + userName + '. That\'s alright. Try try again.');
+    alert('Couldn\'t pick Bill out of a lineup, could you ' + userName + '. That\'s alright. Try try again.');
     // console.log("Couldn't pick him out of a lineup, could you " + userName + ". That's alright. Try try again.");
   }
 }
