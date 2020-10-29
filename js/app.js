@@ -98,19 +98,24 @@ window.onload = function() {
     }
 
     if(guess > secretNumber) {
-      console.log('Sorry ' + userName + '. That is too high. Try a lower number.');
+      alert('Sorry ' + userName + '. That is too high. Try a lower number.');
+      // console.log('Sorry ' + userName + '. That is too high. Try a lower number.');
       numberOfGuesses++;
       if(numberOfGuesses > 3) {
-        console.log('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
+        alert('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
+        // console.log('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
       }
     } else if (guess < secretNumber) {
-      console.log('Sorry ' + userName + '. That is too low. Try a higher number.');
+      alert('Sorry ' + userName + '. That is too low. Try a higher number.');
+      // console.log('Sorry ' + userName + '. That is too low. Try a higher number.');
       numberOfGuesses++;
       if(numberOfGuesses > 3) {
-        console.log('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
+        alert('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
+        // console.log('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
       }
     } else {
-      console.log('Well done, ' + userName + '! ' + secretNumber + ' is absolutely correct!! You guessed it in ' + (numberOfGuesses+1) + ' attempts.');
+      alert('Well done, ' + userName + '! ' + secretNumber + ' is absolutely correct!! You guessed it in ' + (numberOfGuesses+1) + ' attempts.');
+      // console.log('Well done, ' + userName + '! ' + secretNumber + ' is absolutely correct!! You guessed it in ' + (numberOfGuesses+1) + ' attempts.');
       numberOfGuesses=4;
       totalScore++;
     }
@@ -130,7 +135,8 @@ window.onload = function() {
 
     for( var i = 0 ; i < bookSeries.length ; i++) {
       if( bookGuess === bookSeries[i].toLowerCase()) {
-        console.log('You Rock ' + userName + '!! That is one of them. Well done! My favorite book series are: ' + bookSeries[0] + ', ' + bookSeries[1] + ', ' + bookSeries[2] + ', ' + bookSeries[3] + ', ' + bookSeries[4] + ', ' + bookSeries[5] + ', ' + bookSeries[6] + ' and ' + bookSeries[7]);
+        alert('You Rock ' + userName + '!! That is one of them. Well done! My favorite book series are: ' + bookSeries[0] + ', ' + bookSeries[1] + ', ' + bookSeries[2] + ', ' + bookSeries[3] + ', ' + bookSeries[4] + ', ' + bookSeries[5] + ', ' + bookSeries[6] + ' and ' + bookSeries[7]);
+        // console.log('You Rock ' + userName + '!! That is one of them. Well done! My favorite book series are: ' + bookSeries[0] + ', ' + bookSeries[1] + ', ' + bookSeries[2] + ', ' + bookSeries[3] + ', ' + bookSeries[4] + ', ' + bookSeries[5] + ', ' + bookSeries[6] + ' and ' + bookSeries[7]);
         seriesGuesses = 6;
         bookScore = 1;
         totalScore = totalScore + bookScore;
@@ -138,10 +144,12 @@ window.onload = function() {
     }
 
     if(seriesGuesses < 5) {
-      console.log('That\'s incorrect. Try again ' + userName + '. You have ' + (5-seriesGuesses) + ' left.');
+      alert('That\'s incorrect. Try again ' + userName + '. You have ' + (5-seriesGuesses) + ' left.');
+      // console.log('That\'s incorrect. Try again ' + userName + '. You have ' + (5-seriesGuesses) + ' left.');
       seriesGuesses++;
     } else if (seriesGuesses === 5){
-      console.log('Sorry, ' + userName + '. That was your last guess. My favorite book series are: ' + bookSeries[0] + ', ' + bookSeries[1] + ', ' + bookSeries[2] + ', ' + bookSeries[3] + ', ' + bookSeries[4] + ', ' + bookSeries[5] + ', ' + bookSeries[6] + ' and ' + bookSeries[7]);
+      alert('Sorry, ' + userName + '. That was your last guess. My favorite book series are: ' + bookSeries[0] + ', ' + bookSeries[1] + ', ' + bookSeries[2] + ', ' + bookSeries[3] + ', ' + bookSeries[4] + ', ' + bookSeries[5] + ', ' + bookSeries[6] + ' and ' + bookSeries[7]);
+      // console.log('Sorry, ' + userName + '. That was your last guess. My favorite book series are: ' + bookSeries[0] + ', ' + bookSeries[1] + ', ' + bookSeries[2] + ', ' + bookSeries[3] + ', ' + bookSeries[4] + ', ' + bookSeries[5] + ', ' + bookSeries[6] + ' and ' + bookSeries[7]);
       seriesGuesses++;
     }
   }
