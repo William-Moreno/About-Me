@@ -55,6 +55,11 @@ div {
   display: block;
   width: 100%;
   margin: 0px;
+  transform: translateX(-10px);
+}
+
+.goals {
+  transform: translateY(-130px);
 }
 
 h1 {
@@ -77,6 +82,10 @@ h3 {
 
 .bio p {
   text-align: left;
+}
+
+.location p {
+  margin-bottom: 20px;
 }
 
 .lists {
