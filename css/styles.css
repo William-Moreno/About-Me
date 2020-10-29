@@ -8,6 +8,7 @@
 
 header {
   width: 90vw;
+  margin-top: 24px;
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(2, 43, 2);
@@ -26,8 +27,9 @@ article {
   background-color: rgb(2, 43, 2);
   border: 12px groove rgb(214, 164, 99);
   border-top: none;
-  border-bottom-left-radius: 24px;
-  border-bottom-right-radius: 24px;
+  border-bottom: 24px outset rgb(241, 241, 241);
+  /* border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px; */
   padding: 18px;
   text-align: center;
 }
