@@ -24,7 +24,7 @@ window.onload = function() {
   }
 
   // second question
-  var secondAnswer = prompt("One of Bill's main goals is to become a software developer.").toLowerCase();
+  var secondAnswer = prompt('One of Bill\'s main goals is to become a software developer.').toLowerCase();
 
   if (secondAnswer === 'no' || secondAnswer === 'n') {
     alert('Sorry. That is incorrect. Bill does indeed aspire to becoming a successful software developer.');
@@ -39,7 +39,7 @@ window.onload = function() {
   }
 
   // third question
-  var thirdAnswer = prompt("Bill's son, Riley, is his eldest child.").toLowerCase();
+  var thirdAnswer = prompt('Bill\'s son, Riley, is his eldest child.').toLowerCase();
 
   if (thirdAnswer === 'no' || thirdAnswer === 'n') {
     alert('Unfortunately, that is incorrect. His son, Riley, is 14 while his daughter, Alexis, is only 12.');
@@ -91,7 +91,7 @@ window.onload = function() {
   alert('I am thinking of a number from 1 to 25. I\'ll give you 4 chances to guess it correctly. Are you ready ' + userName + '?');
 
   while(numberOfGuesses < 4) {
-    var guess = Math.floor(prompt('Attempt #' + (numberOfGuesses+1) + ': What is your guess, ' + userName + '?'));
+    guess = Math.floor(parseInt(prompt('Attempt #' + (numberOfGuesses+1) + ': What is your guess, ' + userName + '?')));
 
     while(guess < 1 || guess > 25){
       guess = prompt('Please enter a number from 1 to 25');
@@ -118,11 +118,11 @@ window.onload = function() {
 
   /* guess one of my favorite book series */
 
-  var bookSeries = ['Ender\'s Game Series','The Legend of Drizzt Series','Android: Identity Trilogy','The Thrawn Trilogy','Star of the Guardians Series','Kathy Reichs Books','Michael Crichton Books'];
+  var bookSeries = ['The Ender\'s Game Series','The Legend of Drizzt Series','Android: Identity Trilogy','The Thrawn Trilogy','Star of the Guardians Series','Kathy Reichs Books','Michael Crichton Books','The Harry Potter Series'];
   var seriesGuesses = 0;
   var bookGuess;
   var bookScore = 0;
-  
+
   alert('I like reading and have read many series of books over the years. Try to guess one of my favorite book series. This one\'s pretty tough ' + userName +'. Sorry.');
 
   while(seriesGuesses < 6) {
@@ -130,43 +130,43 @@ window.onload = function() {
 
     for( var i = 0 ; i < bookSeries.length ; i++) {
       if( bookGuess === bookSeries[i].toLowerCase()) {
-        console.log('You Rock ' + userName + '!! That is one of them. Well done! My favorite book series are: ' + bookSeries[0] + ', ' + bookSeries[1] + ', ' + bookSeries[2] + ', ' + bookSeries[3] + ', ' + bookSeries[4] + ', ' + bookSeries[5] + ' and ' + bookSeries[6]);
+        console.log('You Rock ' + userName + '!! That is one of them. Well done! My favorite book series are: ' + bookSeries[0] + ', ' + bookSeries[1] + ', ' + bookSeries[2] + ', ' + bookSeries[3] + ', ' + bookSeries[4] + ', ' + bookSeries[5] + ', ' + bookSeries[6] + ' and ' + bookSeries[7]);
         seriesGuesses = 6;
         bookScore = 1;
         totalScore = totalScore + bookScore;
       }
-    }  
+    }
 
     if(seriesGuesses < 5) {
-      console.log('That\s incorrect. Try again ' + userName + '. You have ' + (5-seriesGuesses) + ' left.');
+      console.log('That\'s incorrect. Try again ' + userName + '. You have ' + (5-seriesGuesses) + ' left.');
       seriesGuesses++;
-      
     } else if (seriesGuesses === 5){
-      console.log('Sorry, ' + userName + '. That was your last guess. My favorite book series are: ' + bookSeries[0] + ', ' + bookSeries[1] + ', ' + bookSeries[2] + ', ' + bookSeries[3] + ', ' + bookSeries[4] + ', ' + bookSeries[5] + ' and ' + bookSeries[6]);
+      console.log('Sorry, ' + userName + '. That was your last guess. My favorite book series are: ' + bookSeries[0] + ', ' + bookSeries[1] + ', ' + bookSeries[2] + ', ' + bookSeries[3] + ', ' + bookSeries[4] + ', ' + bookSeries[5] + ', ' + bookSeries[6] + ' and ' + bookSeries[7]);
       seriesGuesses++;
     }
   }
 
+  var finalScore = Math.round((totalScore / numberOfQuestions) * 100);
 
-  var finalScore = Math.round(totalScore / numberOfQuestions); // set random number between 1 and 100
+  /* scoring */
 
-  if (totalScore >= 5) {
-    alert('Congratulations ' + userName + '!! You scored 100%. Well done!!');
+  if (totalScore === 7) {
+    alert('Congratulations ' + userName + '!! You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. Well done!!');
     // console.log('Congratulations ' + userName + '!! You scored 100%. Well done!!');
-  } else if (totalScore === 4) {
-    alert('Good Job ' + userName + '! You scored 80%. Not bad! (...but not quite good enough to pass Code 201 either)');
+  } else if (totalScore === 5 || totalScore === 6) {
+    alert('Good Job ' + userName + '! You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. Not bad! (...but not quite good enough to pass Code 201 either)');
     // console.log('Good Job ' + userName + '! You scored 80%. Not bad! (...but not quite good enough to pass Code 201 either)');
-  } else if (totalScore === 3) {
-    alert('Passable, ' + userName + '. You scored 60%. Room for improvement to be sure.');
+  } else if (totalScore === 3 || totalScore === 4) {
+    alert('Passable, ' + userName + '. You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. Room for improvement to be sure.');
     // console.log('Passable, ' + userName + '. You scored 60%. Room for improvement to be sure.');
   } else if (totalScore === 2) {
-    alert('At least you made an effort ' + userName + '. You scored 40%. I would definitely go back to the source material.');
+    alert('At least you made an effort ' + userName + '. You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. I would definitely go back to the source material.');
     // console.log('At least you made an effort ' + userName + '. You scored 40%. I would definitely go back to the source material.');
   } else if (totalScore === 1) {
-    alert('Were you just randomly guessing, ' + userName + '? You scored 20%. Oh my!');
+    alert('Were you just randomly guessing, ' + userName + '? You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. Oh my!');
     // console.log('Were you just randomly guessing, ' + userName + '? You scored 20%. Oh my!');
   } else {
-    alert("Couldn't pick him out of a lineup, could you " + userName + ". That's alright. Try try again.");
+    alert('Couldn\'t pick him out of a lineup, could you ' + userName + '. That\'s alright. Try try again.');
     // console.log("Couldn't pick him out of a lineup, could you " + userName + ". That's alright. Try try again.");
   }
 }
