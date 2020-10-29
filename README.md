@@ -1,4 +1,4 @@
-# Lab: 02, Lab: 03
+# Lab: 02, Lab: 03, Lab: 04
 
 ## About Me, with a guessing game, Extending 'About Me' Page
 
@@ -9,6 +9,8 @@ I build an app to demonstrate my growing grasp of the fundamentals of HTML, CSS 
 Open in a web browser.
 
 ### Author: William Moreno
+
+- app.js pair programmed with Wondwosen Tsige
 
 ### Links and Resources
 
@@ -28,3 +30,9 @@ Open in a web browser.
 - For what it does, the JavaScript code in particular looks like a behemoth. It is bloated by commented out console.logs that are essentially the same length as my alerts. I should look to truncate or abbreviate the console.logs to increase readability.
 - I am sure that if given enough time, I would find ways to DRY out the code, but the combination of time-pressure and the multiple custom reponses to a variety of questions presents a definite obstacle to this. If I can find time, I will attempt to overcome it.
 - I need to work on how I organize my CSS selectors within the styles.css file to make it easier to find elements I have previously selected.
+
+#### Lab: 04
+
+- The various questions have been wrapped in functions. However, I would like to implement some arrays for question responses to help reduce the overall amount of code.
+- Wondwosen Tsige assisted me with the creation of functions and function calls within the JavaScript.
+- This was also a good opportunity for both of us to learn about forking and pull requests.
