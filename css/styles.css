@@ -28,15 +28,12 @@ article {
   border: 12px groove rgb(214, 164, 99);
   border-top: none;
   border-bottom: 24px outset rgb(241, 241, 241);
-  /* border-bottom-left-radius: 24px;
-  border-bottom-right-radius: 24px; */
   padding: 18px;
   text-align: center;
 }
 
 div {
   display: inline-block;
-  /* border: 3px solid red; */
 }
 
 .bio {
