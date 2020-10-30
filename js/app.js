@@ -26,6 +26,7 @@ window.onload = function() {
       // console.log('You did not answer "yes/y" or "no/n", so I am afraid you do not get credit. Please answer subsequent questions either "yes/y" or "no/n".');
     }
   }
+
   function secondQuestion(){
     var secondAnswer = prompt('One of Bill\'s main goals is to become a software developer.').toLowerCase();
 
@@ -41,6 +42,7 @@ window.onload = function() {
       // console.log('You did not answer "yes/y" or "no/n", so I am afraid you do not get credit. Please answer subsequent questions either "yes/y" or "no/n".');
     }
   }
+
   function thirdQuestion(){
     var thirdAnswer = prompt('Bill\'s son, Riley, is his eldest child.').toLowerCase();
 
@@ -56,6 +58,7 @@ window.onload = function() {
       // console.log('You did not answer "yes/y" or "no/n", so I am afraid you do not get credit. Please answer subsequent questions either "yes/y" or "no/n".');
     }
   }
+
   function fourthQuestion(){
     var fourthAnswer = prompt('Bill spent 15 years working in the aerospace manufacturing industry.').toLowerCase();
 
@@ -71,6 +74,7 @@ window.onload = function() {
       // console.log('You did not answer "yes/y" or "no/n", so I am afraid you do not get credit. Please answer subsequent questions either "yes/y" or "no/n".');
     }
   }
+
   function fifthQuestion(){
     var fifthAnswer = prompt('So far, Bill has lived in Tacoma a total of 4 times.').toLowerCase();
 
@@ -87,15 +91,8 @@ window.onload = function() {
     }
   }
 
-  welcomeMessage();
-  firstQuestion();
-  secondQuestion();
-  thirdQuestion();
-  fourthQuestion();
-  fifthQuestion();
-
-
   /* guessing game */
+
   function guessingGame(){
     var secretNumber = (Math.floor((Math.random()) * 25) + 1); // set random number between 1 and 25
     var numberOfGuesses = 0;
@@ -133,7 +130,9 @@ window.onload = function() {
       }
     }
   }
+
   /* guess one of my favorite book series */
+
   function bookGame(){
     var bookSeries = ['The Ender\'s Game Series','The Legend of Drizzt Series','Android: Identity Trilogy','The Thrawn Trilogy','Star of the Guardians Series','Kathy Reichs Books','Michael Crichton Books','The Harry Potter Series'];
     var seriesGuesses = 0;
@@ -168,6 +167,7 @@ window.onload = function() {
   }
 
   /* scoring */
+  
   function scoring(){
     var finalScore = Math.round((totalScore / numberOfQuestions) * 100);
 
@@ -191,6 +191,13 @@ window.onload = function() {
       // console.log("Couldn't pick him out of a lineup, could you " + userName + ". That's alright. Try try again.");
     }
   }
+
+  welcomeMessage();
+  firstQuestion();
+  secondQuestion();
+  thirdQuestion();
+  fourthQuestion();
+  fifthQuestion();
   guessingGame();
   bookGame();
   scoring();
