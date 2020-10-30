@@ -230,35 +230,39 @@ function fruitGame() {
 
 function scoring(){
   var finalScore = Math.round((totalScore / numberOfQuestions) * 100);
+  var resultMessageScore = 'You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%.';
+  var resultMessage = ['Couldn\'t pick Bill out of a lineup, could you ' + userName + '. That\'s alright. Try try again.','Were you just randomly guessing, ' + userName + '? ' + resultMessageScore + ' Oh my!','At least you made an effort ' + userName + '. ' + resultMessageScore + ' I would definitely go back to the source material.','Passable, ' + userName + '. ' + resultMessageScore + ' Room for improvement to be sure.','Passable, ' + userName + '. ' + resultMessageScore + ' Room for improvement to be sure.','Good Job ' + userName + '! ' + resultMessageScore + ' Pretty Good!','Good Job ' + userName + '! ' + resultMessageScore + ' Not bad! (...but not quite good enough to pass Code 201 either)','Congratulations ' + userName + '!! ' + resultMessageScore + ' Well done!!']
 
-  if (totalScore === 7) {
-    alert('Congratulations ' + userName + '!! You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. Well done!!');
-    // console.log('Congratulations ' + userName + '!! You scored 100%. Well done!!');
-  } else if (totalScore === 5 || totalScore === 6) {
-    alert('Good Job ' + userName + '! You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. Not bad! (...but not quite good enough to pass Code 201 either)');
-    // console.log('Good Job ' + userName + '! You scored 80%. Not bad! (...but not quite good enough to pass Code 201 either)');
-  } else if (totalScore === 3 || totalScore === 4) {
-    alert('Passable, ' + userName + '. You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. Room for improvement to be sure.');
-    // console.log('Passable, ' + userName + '. You scored 60%. Room for improvement to be sure.');
-  } else if (totalScore === 2) {
-    alert('At least you made an effort ' + userName + '. You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. I would definitely go back to the source material.');
-    // console.log('At least you made an effort ' + userName + '. You scored 40%. I would definitely go back to the source material.');
-  } else if (totalScore === 1) {
-    alert('Were you just randomly guessing, ' + userName + '? You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. Oh my!');
-    // console.log('Were you just randomly guessing, ' + userName + '? You scored 20%. Oh my!');
-  } else {
-    alert('Couldn\'t pick Bill out of a lineup, could you ' + userName + '. That\'s alright. Try try again.');
-    // console.log("Couldn't pick him out of a lineup, could you " + userName + ". That's alright. Try try again.");
-  }
+  alert(resultMessage[totalScore]);
+
+  // if (totalScore === 7) {
+  //   alert('Congratulations ' + userName + '!! You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. Well done!!');
+  //   // console.log('Congratulations ' + userName + '!! You scored 100%. Well done!!');
+  // } else if (totalScore === 5 || totalScore === 6) {
+  //   alert('Good Job ' + userName + '! You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. Not bad! (...but not quite good enough to pass Code 201 either)');
+  //   // console.log('Good Job ' + userName + '! You scored 80%. Not bad! (...but not quite good enough to pass Code 201 either)');
+  // } else if (totalScore === 3 || totalScore === 4) {
+  //   alert('Passable, ' + userName + '. You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. Room for improvement to be sure.');
+  //   // console.log('Passable, ' + userName + '. You scored 60%. Room for improvement to be sure.');
+  // } else if (totalScore === 2) {
+  //   alert('At least you made an effort ' + userName + '. You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. I would definitely go back to the source material.');
+  //   // console.log('At least you made an effort ' + userName + '. You scored 40%. I would definitely go back to the source material.');
+  // } else if (totalScore === 1) {
+  //   alert('Were you just randomly guessing, ' + userName + '? You scored ' + totalScore + ' out of ' + numberOfQuestions + '. That\'s ' + finalScore + '%. Oh my!');
+  //   // console.log('Were you just randomly guessing, ' + userName + '? You scored 20%. Oh my!');
+  // } else {
+  //   alert('Couldn\'t pick Bill out of a lineup, could you ' + userName + '. That\'s alright. Try try again.');
+  //   // console.log("Couldn't pick him out of a lineup, could you " + userName + ". That's alright. Try try again.");
+  // }
 }
 
 window.onload = function() {
   welcomeMessage();
-  // firstQuestion();
-  // secondQuestion();
-  // thirdQuestion();
-  // fourthQuestion();
-  // fifthQuestion();
+  firstQuestion();
+  secondQuestion();
+  thirdQuestion();
+  fourthQuestion();
+  fifthQuestion();
   numberGame();
   // guessNumber();
   fruitGame();
