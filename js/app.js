@@ -93,43 +93,77 @@ function fifthQuestion(){
 
 /* guessing random number */
 
-function guessNumber(){
-  var secretNumber = (Math.floor((Math.random()) * 25) + 1); // set random number between 1 and 25
-  var numberOfGuesses = 0;
-  var guess;
+function numberGame() {
   alert('I am thinking of a number from 1 to 25. I\'ll give you 4 chances to guess it correctly. Are you ready ' + userName + '?');
+  var secretNumber = (Math.floor((Math.random()) * 25) + 1);
 
-  while(numberOfGuesses < 4) {
-    guess = parseInt(prompt('Attempt #' + (numberOfGuesses+1) + ': What is your guess, ' + userName + '?'));
+  for( var i = 0 ; i < 4 ; i++ ){
+    var guess = (prompt('Attempt #' + (i+1) + ': What is your guess, ' + userName + '?'));
+    guess = Number(guess);
 
     while(guess < 1 || guess > 25){
       guess = prompt('Please enter a number from 1 to 25');
     }
 
-    if(guess > secretNumber) {
-      alert('Sorry ' + userName + '. That is too high. Try a lower number.');
-      // console.log('Sorry ' + userName + '. That is too high. Try a lower number.');
-      numberOfGuesses++;
-      if(numberOfGuesses > 3) {
-        alert('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
-        // console.log('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
-      }
-    } else if (guess < secretNumber) {
+    if( guess === secretNumber ) {
+      alert('Well done, ' + userName + '! ' + secretNumber + ' is absolutely correct!! You guessed it in ' + (i+1) + ' attempts.');
+      // console.log('Well done, ' + userName + '! ' + secretNumber + ' is absolutely correct!! You guessed it in ' + (numberOfGuesses+1) + ' attempts.');
+      totalScore++;
+      i = 4;
+      break;
+    }
+
+    if ( i > 2 && i < 4 ){
+      alert('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
+      // console.log('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
+      break;
+    } else if( guess < secretNumber ) {
       alert('Sorry ' + userName + '. That is too low. Try a higher number.');
       // console.log('Sorry ' + userName + '. That is too low. Try a higher number.');
-      numberOfGuesses++;
-      if(numberOfGuesses > 3) {
-        alert('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
-        // console.log('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
-      }
     } else {
-      alert('Well done, ' + userName + '! ' + secretNumber + ' is absolutely correct!! You guessed it in ' + (numberOfGuesses+1) + ' attempts.');
-      // console.log('Well done, ' + userName + '! ' + secretNumber + ' is absolutely correct!! You guessed it in ' + (numberOfGuesses+1) + ' attempts.');
-      numberOfGuesses=4;
-      totalScore++;
+      alert('Sorry ' + userName + '. That is too high. Try a lower number.');
+      // console.log('Sorry ' + userName + '. That is too high. Try a lower number.');
     }
   }
 }
+
+// function guessNumber(){
+//   var secretNumber = (Math.floor((Math.random()) * 25) + 1); // set random number between 1 and 25
+//   var numberOfGuesses = 0;
+//   var guess;
+//   alert('I am thinking of a number from 1 to 25. I\'ll give you 4 chances to guess it correctly. Are you ready ' + userName + '?');
+
+//   while(numberOfGuesses < 4) {
+//     guess = parseInt(prompt('Attempt #' + (numberOfGuesses+1) + ': What is your guess, ' + userName + '?'));
+
+//     while(guess < 1 || guess > 25){
+//       guess = prompt('Please enter a number from 1 to 25');
+//     }
+
+//     if(guess > secretNumber) {
+//       alert('Sorry ' + userName + '. That is too high. Try a lower number.');
+//       // console.log('Sorry ' + userName + '. That is too high. Try a lower number.');
+//       numberOfGuesses++;
+//       if(numberOfGuesses > 3) {
+//         alert('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
+//         // console.log('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
+//       }
+//     } else if (guess < secretNumber) {
+//       alert('Sorry ' + userName + '. That is too low. Try a higher number.');
+//       // console.log('Sorry ' + userName + '. That is too low. Try a higher number.');
+//       numberOfGuesses++;
+//       if(numberOfGuesses > 3) {
+//         alert('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
+//         // console.log('I\'m sorry ' + userName + '. You are out of guesses. The correct answer was: ' + secretNumber);
+//       }
+//     } else {
+//       alert('Well done, ' + userName + '! ' + secretNumber + ' is absolutely correct!! You guessed it in ' + (numberOfGuesses+1) + ' attempts.');
+//       // console.log('Well done, ' + userName + '! ' + secretNumber + ' is absolutely correct!! You guessed it in ' + (numberOfGuesses+1) + ' attempts.');
+//       numberOfGuesses=4;
+//       totalScore++;
+//     }
+//   }
+// }
 
 /* guess one of my favorite fruits */
 
@@ -220,12 +254,13 @@ function scoring(){
 
 window.onload = function() {
   welcomeMessage();
-  firstQuestion();
-  secondQuestion();
-  thirdQuestion();
-  fourthQuestion();
-  fifthQuestion();
-  guessNumber();
+  // firstQuestion();
+  // secondQuestion();
+  // thirdQuestion();
+  // fourthQuestion();
+  // fifthQuestion();
+  numberGame();
+  // guessNumber();
   fruitGame();
   // bookGame();
   scoring();
