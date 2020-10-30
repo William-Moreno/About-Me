@@ -2,7 +2,7 @@
 
 ## About Me, with a guessing game, Extending 'About Me' Page, Pair Programming
 
-I build an app to demonstrate my growing grasp of the fundamentals of HTML, CSS and JavaScript. The app displays a styled web page that contains some light biographical information about myself and uses JavaScript to greet the user and play a "guessing" game with them about the information on the page utilizing 5 yes or no questions. Next the user is prompted to try to guess a random number in 4 attempts. Then, the user is prompted to try and guess one of my favorite series of books which are located in an array. Finally, the user is informed of their final score for the "game".
+I build an app to demonstrate my growing grasp of the fundamentals of HTML, CSS and JavaScript. The app displays a styled web page that contains some light biographical information about myself and uses JavaScript to greet the user and play a "guessing" game with them about the information on the page utilizing 5 yes or no questions. Next the user is prompted to try to guess a random number in 4 attempts. Then, the user is prompted to try and guess one of my favorite fruits which are located in an array. Finally, the user is informed of their final score for the "game".
 
 ### How Does The Application Work
 
