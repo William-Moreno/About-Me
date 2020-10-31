@@ -1,8 +1,8 @@
-# Lab: 02, Lab: 03, Lab: 04
+# Lab: 02, Lab: 03, Lab: 04, Lab: 05b
 
-## About Me, with a guessing game, Extending 'About Me' Page, Pair Programming
+## About Me, with a guessing game, Extending 'About Me' Page, Pair Programming, Finish and Deploy Your About Me
 
-I build an app to demonstrate my growing grasp of the fundamentals of HTML, CSS and JavaScript. The app displays a styled web page that contains some light biographical information about myself and uses JavaScript to greet the user and play a "guessing" game with them about the information on the page utilizing 5 yes or no questions. Next the user is prompted to try to guess a random number in 4 attempts. Then, the user is prompted to try and guess one of my favorite fruits which are located in an array. Finally, the user is informed of their final score for the "game".
+I build an app to demonstrate my growing grasp of the fundamentals of HTML, CSS and JavaScript. The app displays a styled web page that contains some light biographical information about myself, a work history, education history, goals and a top ten list. The page uses JavaScript to greet the user and play a "guessing" game with them about the information on the page utilizing 5 yes or no questions. Next the user is prompted to try to guess a random number in 4 attempts. Then, the user is prompted to try and guess one of my favorite fruits which are located in an array. Finally, the user is informed of their final score for the "game".
 
 ### How Does The Application Work
 
@@ -16,6 +16,8 @@ Open in a web browser.
 
 - [About-Me Repository](https://github.com/William-Moreno/About-Me)
 - [JavaScript.info Page about DOMContentLoaded, load, beforeunload, unload](https://javascript.info/onload-ondomcontentloaded)
+- [Google Fonts](https://fonts.google.com/)
+- [Font Awesome](https://fontawesome.com/)
 
 ### Reflections and Comments
 
@@ -36,3 +38,9 @@ Open in a web browser.
 - The various questions have been wrapped in functions. However, I would like to implement some arrays for question responses to help reduce the overall amount of code.
 - Wondwosen Tsige assisted me with the creation of functions and function calls within the JavaScript.
 - This was also a good opportunity for both of us to learn about forking and pull requests.
+
+#### Lab: 05b
+
+- Removed all commented out console.logs and cleaned up the code. New functions created and inserted to replace the final two guessing games.
+- Page updated to include Font Awesome icons and a Google font.
+- Added icons have been styled with CSS and the page has been deployed using GitHub Pages.
