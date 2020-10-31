@@ -130,6 +130,7 @@ span {
   background-color: inherit;
   float: left;
   font-size: 160px;
+  transform: translateY(40px);
   opacity: 0.66;
 }
 
@@ -147,6 +148,7 @@ span {
   font-size: 160px;
   opacity: 0.66;
   transform: translateX(-50px);
+  transform: translateY(20px);
 }
 
 .fa-graduation-cap {
@@ -166,5 +168,4 @@ span {
   opacity: 0.66;
   transform: translateX(10px);
   z-index: 50;
-  /* transform: rotateZ(30deg); */
 }
