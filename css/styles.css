@@ -1,9 +1,9 @@
 * {
   background-color: rgb(19, 24, 24);
-  font-family: cursive;
+  font-family: "Love Ya Like A Sister", cursive;
   font-size: 18px;
   line-height: 20px;
-  color: rgb(252, 241, 228);
+  color: rgba(252, 247, 243, 0.84);
 }
 
 header {
@@ -124,4 +124,47 @@ span {
 .ten-places {
   width: 140px;
   margin: auto;
+}
+
+.fa-globe-europe {
+  background-color: inherit;
+  float: left;
+  font-size: 160px;
+  opacity: 0.66;
+}
+
+.fa-bullseye {
+  background-color: inherit;
+  float: left;
+  font-size: 180px;
+  opacity: 0.66;
+  transform: translateX(-50px);
+}
+
+.fa-map-marked-alt {
+  background-color: inherit;
+  float: right;
+  font-size: 160px;
+  opacity: 0.66;
+  transform: translateX(-50px);
+}
+
+.fa-graduation-cap {
+  background-color: inherit;
+  float: right;
+  font-size: 100px;
+  line-height: 180px;
+  opacity: 0.66;
+  transform: translateX(120px);
+  transform: rotateZ(30deg);
+}
+
+.fa-tools {
+  background-color: inherit;
+  float: right;
+  font-size: 120px;
+  opacity: 0.66;
+  transform: translateX(10px);
+  z-index: 50;
+  /* transform: rotateZ(30deg); */
 }
